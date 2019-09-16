@@ -1,0 +1,43 @@
+Ctrl-B - default prefix for tmux commands
+
+tmux - start a new tmux session
+tmux new -s [name] - start a new session with a name
+tmux attach # - attach to existing session by a number
+tmux attach -t [name] - attach to a session with a name
+tmux rename-session -t 0 [new-name] - rename an existing session
+tmux kill-session -t 0 [new-name] - kill an existing session
+tmux ls - list all tmux sessions
+
+s - list sessions
+$ - rename current session
+d - detach current session
+D - choose a session to detach
+
+# Windows
+c - new window
+n - go to a next window
+p - go to a previous window
+w - list all windows and choose using arrow keys
+, - rename a window
+! - break a pane to another window
+
+# Panes
+% - split panes vertically
+" - split panes horizontally
+arrow keys - move between the panes
+Ctrl-d or exit - close a pane
+z - make a pane go fill screen
+Ctrl-<arrow-key> - resize pane in directon of <arrow-key>
+o - toggle between panes
+x - kill the current pane
+q - show pane numbers
+} - swap with next pane
+{ - swap with previous pane
+
+# Copy & paste
+
+[ - enter a copy mode
+<arrow-keys> - move to the position to start copying
+Ctrl+Space - start copying
+Ctrl-w - copy
+] - paste

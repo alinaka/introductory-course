@@ -1,0 +1,113 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+VIM Basics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Navigation
+h - left
+l - right
+j - down
+k - up
+
+M - move cursor to the middle of the screen
+H - move cursor to the top of the screen
+L - move cursor to the bottom of the screen
+zz - center cursor on screen
+
+Ctrl + b - move back one full screen
+Ctrl + f - move forward one full screen
+
+0 - move to the beginning of the line 
+$ - move to the end of the line
+^ - move to the first non-blank character of the line
+
+gg - go to the first line of the document
+G - go to the last line of the document
+5G - go to the 5th line of the document
+
+w - go to the beginning of the next word
+W - go to the beginning of the next word (word can contain punctuation)
+b - go to the beginning of the previous word
+B - go to the beginning of the previous word (word can contain punctuation)
+e - go to the end of the word
+E - go to the end of the word (word can contain punctuation)
+
+{ - jump to the previous paragraph
+} - jump to the next paragraph
+
+fx - jump to the next occurrence of the character x
+
+% - move to matching parenthesis (defaults are {}, [], ())
+
+# Save & Exit
+:wq - save and quite
+:q! - quit without saving
+:w filename - saves current file under filename (in visual mode saves selected
+lines)
+
+# Editing
+r - replace single character
+cc - change(replace) the whole line
+C - change to the end of line
+s - delete character and substitute text
+cw - change replace to the end of the word
+ciw - change replace the word
+u - undo
+Ctrl + r - redo
+U - undo changes on the whole line
+:s/old/new - replace the first old appearance to new in the line
+:s/old/new/g- replace all the appearances of old to new in the line
+:s/old/new/gc - replace all the appearances of old to new with confirmation in the line
+:%s/old/new - the same but for the whole file
+
+
+# Copy & Paste & Delete
+# operator [number] motion
+yy - copy (yank) one line
+2yy - copy (yank) two lines
+p - paste the clipboard after cursor
+dd - delete a line
+2dd - delete 2 lines
+d$ - delete to the end of the line
+x - delete the character
+5x - remove 5 characters under cursor
+yw - copy the chars from the word from the cursor position to the beginning of
+the next word
+
+# Insert & Append
+i - insert before the cursor position
+a - insert after the cursor position
+A - insert at the end of the line
+I - insert at the beginning of the line
+ea - insert after the end of the word
+o - insert a new line below the cursor
+O - insert a new line above the cursor
+
+# Marks
+ma - mark the cursor as mark A
+`a - go to the mark A
+:marks - list existing marks
+
+# Working with multiple files
+:e file - edit file in a new buffer
+:bd - delete buffer
+:bn - go to the next buffer
+:bp - go to the previous buffer
+:r filename - retirieve a file and place its content below the cursor
+:r !ls - reads the output of the ls command and puts it below the cursor
+ 
+# Other
+Ctrl-G display the current location in tht file and the file status
+:!command - executes an external command
+Ctrl-D - when typing a : command, shows possible completions
+<TAB> - to use one completion
+:e - reopen an opened file
+
+# Search
+/phrase - search for a phrase FORWARD
+?phrase - search for a phrase BACKWARD
+n - the next occurrence in the same direction
+N - the next occurrence in the opposite direction
+Ctrl-O - move to the older position
+Ctrl-I - move to the newer position
+
+
