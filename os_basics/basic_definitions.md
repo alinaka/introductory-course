@@ -40,3 +40,15 @@ boundary between user space and kernel space. They are often also used for IPC
 Socket can be thought as an endpoint for a two-way communication channel. 
 Each socket within the network has a unique name associated with it called a socket descriptor - 
 an integer that designates socket and allows application programs to refer to it. 
+
+## what is sync syscall? why does anybody use it?
+kernel keeps data in memory to avoid doing slow disk reads and writes.
+This improves performance, but if the computer crashes, data may be lost or fs could be corrupt,
+so this sys call ensures that everything in memory is written to disk.
+
+## how to interact between kernel and user space
+system call, ioctl, proc filesystem, netlink socket, ...
+
+## what is netlink in linux?
+netlink socket is a IPC for transferring information between user space and kernel space.
+Netlink socket uses address family AF_NETLINK 
