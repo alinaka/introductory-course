@@ -1,4 +1,4 @@
-virtual memory - a memory access scheme. When using virtual memore, the kernel does not access the memory by its physical location in the hardware. 
+v|irtual memory - a memory access scheme. When using virtual memore, the kernel does not access the memory by its physical location in the hardware. 
 Instead, the kernel sets up every process to act as if it had an entire machine to itself.
 
 Memory management unit (MMU) - translates the memory location from the process into an actual physical memory location on the machine, using
@@ -13,6 +13,7 @@ Kernel manages tasks in 4 different areas:
 ## what is kernel space and user space?
  
 User space - the main memory that the kernel allocates for user processes.
+Kernel space - the area that only the kernel can access
 
 ## what is init?
 
