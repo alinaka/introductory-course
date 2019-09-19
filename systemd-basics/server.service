@@ -1,0 +1,8 @@
+[Unit]
+Description=serve files
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/home/alina.gotovtceva/vas3k.ru
+ExecStart=/usr/bin/python3 -m http.server 8000
+
