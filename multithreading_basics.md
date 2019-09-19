@@ -39,6 +39,10 @@ Performing the V operation is called unlocking the mutex.
 
 ## what is a condition variable?
 a variable that is used for scheduling accesses to shared resources.
+it can be used to wait for some event to happen and then get exclusive access to a shared resource
+it's possible to have multiple condition variables share one lock, which allows
+coordinating exclusive access to a shared resource
+between different tasks interested in particular states of that shared resource
 
 ## what is GIL in Python?
 GIL is a single lock on the interpreter which adds a rule that execution of any Python bytecode requires acquiring the interpreter lock. This prevents deadlocks,
