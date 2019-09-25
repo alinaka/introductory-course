@@ -1,8 +1,12 @@
 [Unit]
-Description=serve files
+Description=serve mirror of The Hitchhiker's Guide to Python 
 After=multi-user.target
 
 [Service]
-WorkingDirectory=/home/alina.gotovtceva/vas3k.ru
+WorkingDirectory=/home/alina.gotovtceva/docs.python-guide.org
 ExecStart=/usr/bin/python3 -m http.server 8000
+Restart=Always
+
+[Install]
+WantedBy=multi-user.target
 
